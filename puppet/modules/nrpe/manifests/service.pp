@@ -4,6 +4,6 @@ class nrpe::service {
 	hasstatus => true,
 	hasrestart => true,
 	enable => true,
-	require => Class["nagios::config:],
+	require => Class["nrpe::config"],
 }
 }
