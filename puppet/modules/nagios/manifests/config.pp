@@ -44,8 +44,8 @@ service_notification_period => '24x7',
 host_notification_period => '24x7',
 service_notification_options => 'w,u,c,r',
 host_notification_options => 'd,r',
-service_notification_commands => 'notify-service-by-slack',
-host_notification_commands => 'notify-host-by-slack',
+service_notification_commands => 'notify-service-by-email',
+host_notification_commands => 'notify-host-by-email',
 email => 'sinhauddeshya@gmail.com',
 }
 nagios_contactgroup { 'sysadmins':
@@ -396,7 +396,7 @@ members => 'localhost',
 nagios_hostgroup{'ssh-servers':
 target => '/etc/nagios3/conf.d/ppt_hostgroups.cfg',
 alias => 'SSH Servers',
-members => 'localhost',
+members => 'localhost, db.foo.org.nz, storage.foo.org.nz, app.foo.org.nz',
 }
 
 
