@@ -391,7 +391,7 @@ members => 'localhost, db.foo.org.nz, storage.foo.org.nz, app.foo.org.nz',
 nagios_hostgroup{'http-servers':
 target => '/etc/nagios3/conf.d/ppt_hostgroups.cfg',
 alias => 'HTTP Servers',
-members => 'localhost',
+members => 'localhost, app.foo.org.nz',
 }
 nagios_hostgroup{'ssh-servers':
 target => '/etc/nagios3/conf.d/ppt_hostgroups.cfg',
